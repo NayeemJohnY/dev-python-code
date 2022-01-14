@@ -16,14 +16,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.8", "3.9", "3.10"]
+        python-version: ["3.8"]
 
     steps:
     - name: Check out my other private repo
       uses: actions/checkout@main
       with:
         repository: NayeemJohnY/test-python-code
-        token: ${{ secrets.my_pat }}
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
